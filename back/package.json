@@ -2,15 +2,22 @@
   "name": "startrek-wiki-back",
   "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "watch": "ts-node-dev --respawn index.dev.ts",
-    "db:dev": "docker run -d -p 27017:27017 --name startrek-wiki mongo -v /data/db:/data/db",
-    "dev": "yarn db:dev && yarn watch"
+    "db:dev": "docker run -d -p 27017:27017 --name startrek-wiki mongo -v /data/db:/data/db"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.7.11",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
     "module-alias": "^2.2.2",
+    "prettier": "^2.0.4",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "mongoose": "^5.9.9"
   }
 }
