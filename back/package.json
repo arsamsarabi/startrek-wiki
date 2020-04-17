@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "watch": "ts-node-dev --respawn index.dev.ts"
+    "watch": "ts-node-dev --respawn index.dev.ts",
+    "db:dev": "docker run -d -p 27017:27017 --name startrek-wiki mongo -v /data/db:/data/db",
+    "dev": "yarn db:dev && yarn watch"
   },
   "devDependencies": {
     "module-alias": "^2.2.2",
